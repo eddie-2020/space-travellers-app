@@ -1,0 +1,55 @@
+.header-container {
+  height: 4rem;
+  padding: 0 10%;
+  border-bottom: 2px solid #efefef;
+  margin: 20px;
+  color: #000;
+}
+
+.header-container nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-container ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-container li {
+  margin: 10px;
+  color: #000;
+  text-align: center;
+}
+
+.header-container a {
+  color: #333;
+  text-decoration: none;
+}
+
+.header-container a.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+.quotations {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+  font-family: sans-serif;
+  line-height: 30px;
+}
+
+.logo-container {
+  background-image: url(/src//assets/planet.png);
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+}
