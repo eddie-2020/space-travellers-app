@@ -3,9 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/configureStore';
 import Navbar from './components/Navbar';
-import NavRocket from './pages/navRocket';
-import NavProfile from './pages/navProfile';
-import NavMission from './pages/navMission';
+import NavRocket from './components/navRocket';
+import NavProfile from './components/navProfile';
+import NavMission from './components/navMission';
 
 function App() {
   return (
