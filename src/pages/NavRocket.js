@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 
-const NavRockect = () => (
+const NavRocket = () => (
   <div className="rocket">
     <h1>
       This Is The Rocket Page
@@ -9,4 +9,4 @@ const NavRockect = () => (
   </div>
 );
 
-export default NavRockect;
+export default NavRocket;

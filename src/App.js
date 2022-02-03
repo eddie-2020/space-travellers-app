@@ -3,8 +3,8 @@ import { Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/configureStore';
 import Navbar from './components/Navbar';
-import NavProfile from './pages/navProfile';
 import NavRocket from './pages/navRocket';
+import NavProfile from './pages/navProfile';
 import NavMission from './pages/navMission';
 
 function App() {
