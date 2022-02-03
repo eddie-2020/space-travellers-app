@@ -7,11 +7,12 @@ const Navbar = () => (
     <header className="header-container">
       <nav>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <li
+          <div
             className="logo-container"
-            style={{ fontSize: 15, fontFamily: 'sans-serif' }}
           />
-          <li style={{ fontSize: 20 }}>Space Travelers&apos; Hub</li>
+          <div>
+            <li className="logo-detail">Space Travelers&apos; Hub</li>
+          </div>
         </div>
 
         <ul>

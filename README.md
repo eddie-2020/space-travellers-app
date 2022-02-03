@@ -7,6 +7,7 @@
 This project was built to add books, remove books, update books and comment on the stored books.
 
 ![](/src/assets/AddNav.PNG)
+![](/src/assets/RocketSetUpPage.PNG)
 
 # Built With
 
