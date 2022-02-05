@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { joinRocket, leaveRocket } from '../../redux/Rockets/Rockets';
 
 const Rocket = () => {
-  const rocket = useSelector(state => state.rockectsReducer);
+  const rocket = useSelector((state) => state.rockectsReducer);
   const dispatch = useDispatch();
 
   const {
