@@ -4,11 +4,12 @@
 
 # Additional description about the project and its features.
 
-This project was built to add books, remove books, update books and comment on the stored books.
+This project was built to reserve users booked rocket and the user can also cancel reserved rockets, Users can also join mission and leave mission in the mission page.
 
 ![](/src/images/screen1.png)
 ![](/src/images/screen2.png)
 ![](/src/images/screen3.png)
+![](/src/images/TestSnapShot.PNG)
 
 # Built With
 

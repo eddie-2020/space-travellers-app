@@ -26,7 +26,6 @@ const Rockets = () => {
         description: rocket.description,
       }
     ));
-    console.log(wantedData);
     dispatch(fetchRocket(wantedData));
   };
 
@@ -40,8 +39,6 @@ const Rockets = () => {
     <div className="container">
       {
         rocketsArray.map((rocket) => {
-          /* disable this rule because it is given from the API */
-          /* eslint-disable camelcase */
           const {
             id,
             name,

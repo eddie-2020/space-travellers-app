@@ -1,7 +1,9 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { joinMission, leaveMission } from '../../redux/Missions/Missions';
 
-const Mission = (mission) => {
+const Mission = () => {
+  const mission = useSelector((state) => state.mission);
   const dispatch = useDispatch();
   const {
     id,
