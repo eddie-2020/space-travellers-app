@@ -49,19 +49,17 @@ const Missions = () => {
         <tbody>
           {
             missionsArray.map((mission) => {
-              /* disable this rule because it is given from the API */
-              /* eslint-disable camelcase */
               const {
-                mission_name,
-                mission_id,
+                mission_name: name,
+                mission_id: id,
                 description,
                 reserved,
               } = mission;
               return (
                 <Mission
-                  key={mission_id}
-                  id={mission_id}
-                  name={mission_name}
+                  key={id}
+                  id={id}
+                  name={name}
                   reserved={reserved}
                   description={description}
                 />
