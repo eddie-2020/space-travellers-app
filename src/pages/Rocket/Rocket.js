@@ -1,7 +1,9 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { joinRocket, leaveRocket } from '../../redux/Rockets/Rockets';
 
-const Rocket = (rocket) => {
+const Rocket = () => {
+  const rocket = useSelector(state => state.rockectsReducer);
   const dispatch = useDispatch();
 
   const {
