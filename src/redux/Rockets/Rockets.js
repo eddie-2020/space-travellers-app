@@ -1,47 +1,30 @@
-/* eslint-disable consistent-return */
-import Axios from 'axios';
-// actions
+const FETCH_ROCKET = 'Space-Travelers-Hub/Rocket/FETCH_ROCKET';
+const JOIN_ROCKET = 'Space-Travelers-Hub/Rocket/JOIN_ROCKET';
+const LEAVE_ROCKET = 'Space-Travelers-Hub/Rocket/LEAVE_ROCKET';
 
-const FETCH_ROCKET = 'FETCH_ROCKET';
+const initialState = [];
 
-const RESERVE_ROCKET = 'RESERVE_ROCKET';
-
-const CANCEL_ROCKET = 'CANCEL_ROCKET';
-
-const fetchRocket = (payload) => ({
+export const fetchRocket = (payload) => ({
   type: FETCH_ROCKET,
   payload,
 });
 
-export const reserveRocket = (payload) => ({
-  type: RESERVE_ROCKET,
+export const joinRocket = (payload) => ({
+  type: JOIN_ROCKET,
   payload,
 });
 
-export const cancelRocket = (payload) => ({
-  type: CANCEL_ROCKET,
+export const leaveRocket = (payload) => ({
+  type: LEAVE_ROCKET,
   payload,
 });
-
-export const fetchRocketApi = () => async (dispatch) => {
-  try {
-    const { data } = await Axios.get('https://api.spacexdata.com/v3/rockets');
-    dispatch(fetchRocket(data));
-  } catch (error) {
-    return error;
-  }
-};
-
-// initialize State
-
-const initialState = [];
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_ROCKET:
-      return action.payload.map((rocket) => ({ ...rocket, reserved: false }));
+      return action.payload;
 
-    case RESERVE_ROCKET: {
+    case JOIN_ROCKET: {
       const newState = state.map((rocket) => {
         if (rocket.id !== action.payload) return rocket;
         return { ...rocket, reserved: true };
@@ -49,7 +32,7 @@ const reducer = (state = initialState, action) => {
       return newState;
     }
 
-    case CANCEL_ROCKET: {
+    case LEAVE_ROCKET: {
       const newState = state.map((rocket) => {
         if (rocket.id !== action.payload) return rocket;
         return { ...rocket, reserved: false };

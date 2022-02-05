@@ -12,14 +12,26 @@ const Header = () => (
         <h1>Space Travelers Hub</h1>
       </div>
       <nav>
-        <NavLink to="/rockets" activeclassname="active">
+        <NavLink
+          to="/"
+          activeClassName="active"
+          style={{ textDecoration: 'none' }}
+        >
           Rockets
         </NavLink>
-        <NavLink to="/missions" activeclassname="active">
+        <NavLink
+          to="/missions"
+          style={{ textDecoration: 'none' }}
+          activeClassName="active"
+        >
           Missions
         </NavLink>
         {' | '}
-        <NavLink to="/profile" activeclassname="active">
+        <NavLink
+          to="/profile"
+          activeClassName="active"
+          style={{ textDecoration: 'none' }}
+        >
           {' '}
           My profile
         </NavLink>
